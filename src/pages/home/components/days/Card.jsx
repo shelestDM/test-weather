@@ -7,14 +7,21 @@ const Card = ({day,setVisiblePop}) => {
       
     return (
         <div className={s.card}>
-            <div className={s.day}>{todayTomorrow(getDayOfWeek(day.dt_txt))}</div>
-            <div className={s.day__info}>{sliceDate(day.dt_txt)}</div>   
-            <div className={s.img}>
-                <GlobalSvgSelector id={day.weather[0].description}></GlobalSvgSelector>
+            <div className={s.day_and_img_wrapper}>
+                <div className={s.day_wrapper}>
+                    <div className={s.day}>{todayTomorrow(getDayOfWeek(day.dt_txt))}</div>
+                    <div className={s.day__info}>{sliceDate(day.dt_txt)}</div> 
+                </div>
+                <div className={s.img}>
+                  
+                   <div className={s.svg} > <GlobalSvgSelector id={day.weather[0].description}></GlobalSvgSelector></div>
+                   <div className={s.info}>{FirsLetterBig(day.weather[0].description)}</div>
+                </div>
             </div>
-            <div className={s.temp__day}>{day.main.temp}°</div>
-            <div className={s.temp__night}>{day.temp_night}°</div>
-            <div className={s.info}>{FirsLetterBig(day.weather[0].description)}</div>
+            <div className={s.temp_wrapper}>
+                <div className={s.temp__day}>{day.main.temp}°</div>
+                <div className={s.temp__night}>{day.main.temp_min}°</div>
+            </div>
         </div>
     );
 };
