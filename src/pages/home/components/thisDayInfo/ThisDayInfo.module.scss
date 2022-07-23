@@ -1,0 +1,386 @@
+@import '../../../../styles/variables.scss';
+
+.this__day_info{
+    position: relative;
+    padding: 40px;
+    max-width: 750px;
+    width: 100%;
+    background: var(#{--components-background-default});
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+}
+
+.item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    .indicator,
+    .indicator__name{
+        margin-right: 20px;
+    }
+
+    .indicator{
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: 1px 4px 10px -1px rgba(71,147,255, 0.2);
+        border-radius: 50%;
+    }
+
+    .indicator__name,
+    .indicator__value{
+        font-size: 14px;
+    }
+
+    .indicator__name{
+        color: $base-color;
+    }
+    .indicator__value{
+        color: var(#{--text-color-default});
+    }
+}
+
+.cloud__img{
+    width: 400px;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.descriptions{
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media screen and (max-width: 576px) {
+    .item{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-bottom: 25px;
+        margin-right: 30px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        .indicator,
+        .indicator__name{
+            margin-right: 20px;
+            text-align: center;
+        }
+    
+        .indicator{
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 1px 4px 10px -1px rgba(71,147,255, 0.2);
+            border-radius: 50%;
+        }
+    
+        .indicator__name,
+        .indicator__value{
+            font-size: 15px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+        .indicator__name{
+            color: $base-color;
+            margin-bottom: 10px;
+        }
+        .indicator__value{
+            color: var(#{--text-color-default});
+        }
+    }
+    .cloud__img{
+        display: none;
+    }
+    .descriptions{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 577px) {
+    .item{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        margin-right: 30px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        .indicator,
+        .indicator__name{
+            margin-right: 20px;
+            text-align: center;
+        }
+    
+        .indicator{
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 1px 4px 10px -1px rgba(71,147,255, 0.2);
+            border-radius: 50%;
+        }
+    
+        .indicator__name,
+        .indicator__value{
+            font-size: 14px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+        .indicator__name{
+            color: $base-color;
+            margin-bottom: 8px;
+        }
+        .indicator__value{
+            color: var(#{--text-color-default});
+        }
+    }
+    .cloud__img{
+      display: none;
+    }
+    .descriptions{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .item{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        margin-right: 40px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        .indicator,
+        .indicator__name{
+            margin-right: 20px;
+            text-align: center;
+        }
+    
+        .indicator{
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 1px 4px 10px -1px rgba(71,147,255, 0.2);
+            border-radius: 50%;
+        }
+    
+        .indicator__name,
+        .indicator__value{
+            font-size: 16px;
+            margin: 0 auto;
+            text-align: center;
+            margin-right: 10px;
+        }
+    
+        .indicator__name{
+            color: $base-color;
+            margin-bottom: 8px;
+        }
+        .indicator__value{
+            color: var(#{--text-color-default});
+        }
+    }
+    .cloud__img{
+        display: block;
+        width: 280px;
+        height: 135px;
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+    .descriptions{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .item{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 25px;
+        margin-right: 0px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        .indicator,
+        .indicator__name{
+            margin-right: 20px;
+        }
+    
+        .indicator{
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 1px 4px 10px -1px rgba(71,147,255, 0.2);
+            border-radius: 50%;
+        }
+    
+        .indicator__name,
+        .indicator__value{
+            font-size: 16px;
+        }
+    
+        .indicator__name{
+            color: $base-color;
+        }
+        .indicator__value{
+            color: var(#{--text-color-default});
+        }
+    }
+    
+    .cloud__img{
+        width: 300px;
+        height: 135px;
+        position: absolute;
+        opacity: 0.7;
+        top: 0;
+        right: 0;
+    }
+    .descriptions{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .item{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 25px;
+        margin-right: 0px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        .indicator,
+        .indicator__name{
+            margin-right: 20px;
+        }
+    
+        .indicator{
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 1px 4px 10px -1px rgba(71,147,255, 0.2);
+            border-radius: 50%;
+        }
+    
+        .indicator__name,
+        .indicator__value{
+            font-size: 16px;
+        }
+    
+        .indicator__name{
+            color: $base-color;
+        }
+        .indicator__value{
+            color: var(#{--text-color-default});
+        }
+    }
+    
+    .cloud__img{
+        width: 400px;
+        height: 180px;
+        position: absolute;
+        opacity: 0.7;
+        top: 0;
+        right: 0;
+    }
+    .descriptions{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .item{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 25px;
+        margin-right: 0px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        .indicator,
+        .indicator__name{
+            margin-right: 20px;
+        }
+    
+        .indicator{
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 1px 4px 10px -1px rgba(71,147,255, 0.2);
+            border-radius: 50%;
+        }
+    
+        .indicator__name,
+        .indicator__value{
+            font-size: 16px;
+        }
+    
+        .indicator__name{
+            color: $base-color;
+        }
+        .indicator__value{
+            color: var(#{--text-color-default});
+        }
+    }
+    
+    .cloud__img{
+        width: 400px;
+        height: 180px;
+        position: absolute;
+        opacity: 0.7;
+        top: 0;
+        right: 0;
+    }
+    .descriptions{
+        display: flex;
+        flex-direction: row;
+    }
+} 
