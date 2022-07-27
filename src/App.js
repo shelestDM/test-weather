@@ -4,7 +4,6 @@ import { CityContext } from "./context/CityContext.js";
 import Home from './pages/home/Home.jsx';
 import MonthStatistic from './pages/monthStatistic/MonthStatistic.jsx';
 import Header from './pages/shared/header/Header.jsx';
-import Popup from "./pages/shared/popup/Popup.jsx";
 
 function App() {
 
@@ -14,12 +13,11 @@ function App() {
 
   return (
     <div className="global-container">
-         {/*  <Popup ></Popup> */}
       <div className="container">
         <BrowserRouter>
         <Header options={options} setCity={setCity} City={City}></Header>
               <Routes>
-                <Route path="/" element={<Home City={City} ></Home>} ></Route>
+                <Route path="/react-weather" element={<Home City={City} ></Home>} ></Route>
                 <Route path="/monthstatistic" element={<MonthStatistic></MonthStatistic>}></Route>
               </Routes>
           </BrowserRouter>

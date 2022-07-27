@@ -40,12 +40,16 @@
 }
 
 @media screen and (max-width: 576px) {
+    .this__day{
+        max-width: 350px;
+        padding: 5px;
+    }
     .top__block{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         margin-left: 30px; 
         svg{
            width: 45px;
@@ -155,6 +159,9 @@
   }
 
 @media screen and (min-width: 992px) {
+    .this__day{
+       margin: 10px;
+    }
     .top__block{
         display: flex;
         justify-content: space-between;

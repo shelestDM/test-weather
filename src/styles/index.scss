@@ -2,7 +2,12 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Montserrat:wght@300;500;600&family=Poppins:wght@300&display=swap');
 
+html{
+    margin: 0;
+    padding: 0;
+}
 *, *:after, *:before{
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -13,7 +18,7 @@ body{
 }
 
 .container{
-    max-width: 1200px;
+   /*  max-width: 1200px; */
     margin: 0 auto;
     padding-top: 20px;
 }

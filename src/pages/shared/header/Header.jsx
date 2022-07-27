@@ -4,9 +4,10 @@ import s from './Header.module.scss';
 import Select from 'react-select';
 import { useTheme } from '../../../hooks/useTheme';
 
-const Header = ({options, setCity, City}) => {
 
-  const theme = useTheme();
+const Header = ({options, setCity}) => {
+
+  const theme =  useTheme();
 
   const colorStyles = {
     control: (styles)=>({
@@ -31,7 +32,7 @@ const Header = ({options, setCity, City}) => {
   return (
     <header className={s.header}>
         <div className={s.wrapper}>
-            <div className={s.logo}>
+            <div className={s.logo} >
                <GlobalSvgSelector id={'header-logo'}></GlobalSvgSelector> 
             </div>
             <div className={s.title}>  React Weather </div>

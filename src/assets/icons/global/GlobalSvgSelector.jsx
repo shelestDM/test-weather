@@ -589,7 +589,6 @@ const GlobalSvgSelector = ({id}) => {
               />
             </svg>
           );
-
         default:
             return null
     }
